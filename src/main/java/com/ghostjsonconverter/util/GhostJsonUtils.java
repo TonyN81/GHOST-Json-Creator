@@ -1,10 +1,8 @@
 package com.ghostjsonconverter.util;
 
 import java.security.InvalidParameterException;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Random;
-import java.util.Set;
 
 import org.ajbrown.namemachine.Name;
 import org.ajbrown.namemachine.NameGenerator;

@@ -13,7 +13,7 @@ import com.ghostjsonconverter.model.Task;
 
 public class TaskJsonDaoImpl implements TaskDao {
 	
-	private static String TASK_OUTPUT_PATH = "src/main/output/tasks.json";
+	private static String TASK_OUTPUT_PATH = "tasks.json";
 	
 	private static JsonFactory jfactory = new JsonFactory();
 	
@@ -40,8 +40,7 @@ public class TaskJsonDaoImpl implements TaskDao {
 			jGenerator.writeEndArray();
 			jGenerator.close();
 		} catch (IOException e) {
-			System.out.println("Error with writing JSON file at " + TASK_OUTPUT_PATH);
-			e.printStackTrace();
+			System.err.println("Error with writing JSON file at " + TASK_OUTPUT_PATH);
 			return -1;
 		}
 		return 1;

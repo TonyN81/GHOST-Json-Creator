@@ -11,6 +11,11 @@ public class TaskService {
 	
 	private TaskJsonDaoImpl taskDao = new TaskJsonDaoImpl();
 	
+	/**
+	 * Saves Tasks to JSON file.
+	 * @param tasks The list of Tasks
+	 * @return true if success false otherwise.
+	 */
 	public boolean saveToJson(List<Task> tasks) {
 		if (taskDao.save(tasks) < 0) {
 			System.out.println("Failed to save tasks.");
@@ -21,6 +26,13 @@ public class TaskService {
 			return true;
 		}
 	}
+	
+	/**
+	 * Creates tasks with Profiles and product url.
+	 * @param profiles Profiles to create Tasks.
+	 * @param url The product URL.
+	 * @return List of Tasks.
+	 */
 	public List<Task> createTasks(List<Profile> profiles, String url) {
 		List<Task> tasks = new ArrayList<>();
 		
@@ -31,6 +43,12 @@ public class TaskService {
 		return tasks;
 	}
 	
+	/**
+	 * Creates an individual Task with profile name and URL.
+	 * @param profileName The profile name.
+	 * @param url product URL.
+	 * @return Task.
+	 */
 	private Task createTask(String profileName, String url) {
 		Task task = new Task();
 		task.setAccount("");
