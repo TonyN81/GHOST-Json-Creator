@@ -57,6 +57,7 @@ public class CreditCardApachePoiDaoImpl implements CreditCardDao {
 					creditCard.setCardNumber(getCellAsString(row.getCell(CARD_NUMBER_INDEX)));
 					creditCard.setExpiryMonth(getCellAsString(row.getCell(EXPIRY_MONTH_INDEX)));
 					creditCard.setExpiryYear(getCellAsString(row.getCell(EXPIRY_YEAR_INDEX)));
+					creditCard.setCvv(getCellAsString(row.getCell(CVV_INDEX)));
 										
 					// card type is currently static
 					creditCard.setCardType(CARD_TYPE);
